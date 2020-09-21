@@ -35,7 +35,6 @@ var ckbIP = (function () {
     }
     
     function init(param) {
-        debugger
         initParam(param);
 
         var listDom = $(checkBoxSelectorStr);
@@ -83,7 +82,6 @@ var ckbIP = (function () {
 
     // 当页面关闭清空sessionStorage
     function clear() {
-        debugger
         var delKeyArr = []; // 要删除的key集合，删除会导致sessionStorage 长度动态变化，要先记录
         var length = sessionStorage.length;
         for (var i = 0; i < length; i++) {
@@ -103,7 +101,6 @@ var ckbIP = (function () {
 
     // 全选复选框
     function onCheckAllClick() {
-        debugger
         var checkAllStatus = $(checkAllBoxId).attr('checked');
         var curPageCheckListDom = $(checkBoxSelectorStr); // 当前页面复选框
         if (checkAllStatus === 'checked') {
@@ -127,7 +124,6 @@ var ckbIP = (function () {
     }
 
     function onCheckChange(event) {
-        debugger
         var id = $(this).val();
         var checkStatus = $(this).attr('checked');
 
